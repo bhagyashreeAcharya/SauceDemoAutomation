@@ -14,15 +14,16 @@ public class BaseTest {
 
         driver = new ChromeDriver();
 
-        driver.get("https://www.saucedemo.com/");
+        driver.manage().window().maximize();
 
+        driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
     public void teardown() {
 
-        driver.quit();
-
+        if (driver != null) {
+            driver.quit();
+        }
     }
-
 }
