@@ -1,46 +1,30 @@
-package base;
+@BeforeMethod
+public void setup() {
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+    ChromeOptions options = new ChromeOptions();
 
-import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
+    // Detect if running in CI (GitHub Actions sets CI=true automatically)
+    String isCI = System.getenv("CI");
 
-public class BaseTest {
-
-    protected WebDriver driver;
-    protected WebDriverWait wait;
-
-    @BeforeMethod
-    public void setup() {
-
-        ChromeOptions options = new ChromeOptions();
-
-        Map<String, Object> prefs = new HashMap<>();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
-        prefs.put("profile.password_manager_leak_detection", false);
-
-        options.setExperimentalOption("prefs", prefs);
-
-        driver = new ChromeDriver(options);
-
-        driver.manage().window().maximize();
-
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        driver.get("https://www.saucedemo.com/");
+    if (isCI != null && isCI.equals("true")) {
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
     }
 
-    @AfterMethod
-    public void teardown() {
+    // Your ChromeOptions skill (password manager handling)
+    Map<String, Object> prefs = new HashMap<>();
+    prefs.put("credentials_enable_service", false);
+    prefs.put("profile.password_manager_enabled", false);
+    prefs.put("profile.password_manager_leak_detection", false);
 
-        driver.quit();
+    options.setExperimentalOption("prefs", prefs);
 
-    }
+    driver = new ChromeDriver(options);
+
+    driver.manage().window().maximize();
+
+    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    driver.get("https://www.saucedemo.com/");
 }
