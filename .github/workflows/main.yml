@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -17,11 +17,8 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: 21
+          distribution: 'temurin'
+          java-version: '17'
 
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-
-      - name: Run Maven Tests
+      - name: Build and run tests
         run: mvn clean test
