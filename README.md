@@ -10,17 +10,17 @@ This project is designed as part of a QA Automation portfolio to showcase automa
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
-**Language:** Java 21
-** Automation Tool:** Selenium WebDriver
-** Test Framework:** TestNG
-** Build Tool:** Maven
-** IDE:** IntelliJ IDEA
-** Version Control:** Git + GitHub
-** Browser:** Google Chrome
-** Wait Strategy **: Explicit Wait (WebDriverWait)
-** CI/CD: **  GitHub Actions
+- **Language:** Java 21  
+- **Automation Tool:** Selenium WebDriver 4  
+- **Test Framework:** TestNG  
+- **Build Tool:** Maven  
+- **IDE:** IntelliJ IDEA  
+- **Version Control:** Git + GitHub  
+- **Browser:** Google Chrome  
+- **Wait Strategy:** Explicit Wait (WebDriverWait)  
+- **CI/CD:** GitHub Actions  
 
 --
 
