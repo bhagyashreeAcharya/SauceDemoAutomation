@@ -12,16 +12,17 @@ This project is designed as part of a QA Automation portfolio to showcase automa
 
 ## Tech Stack
 
-* Language: Java
-* Automation Tool: Selenium WebDriver
-* Test Framework: TestNG
-* Build Tool: Maven
-* IDE: IntelliJ IDEA
-* Version Control: Git + GitHub
-* Browser: Google Chrome
-* Wait Strategy: Explicit Wait (WebDriverWait)
+**Language:** Java 21
+** Automation Tool:** Selenium WebDriver
+** Test Framework:** TestNG
+** Build Tool:** Maven
+** IDE:** IntelliJ IDEA
+** Version Control:** Git + GitHub
+** Browser:** Google Chrome
+** Wait Strategy **: Explicit Wait (WebDriverWait)
+** CI/CD: **  GitHub Actions
 
----
+--
 
 ## Framework Structure
 
@@ -120,19 +121,46 @@ This improves test stability and prevents flaky tests.
 
 ---
 
-## How to Run Tests
+## ▶️ How to Run Tests
 
-### Option 1: Run from IntelliJ
+### Prerequisites
 
-Right-click any test class → Run
+- Java 17 or above
+- Maven installed
+- Google Chrome browser
+
+### Clone Repository
+
+```
+git clone https://github.com/bhagyashreeAcharya/SauceDemoAutomation.git
+cd SauceDemoAutomation
+```
+
+### Run All Tests
+
+```
+mvn clean test
+```
+
+### Run Specific Test Class
+
+```
+mvn -Dtest=LoginTest test
+```
 
 ---
 
-### Option 2: Run using Maven
+## 🔁 Continuous Integration (CI)
 
-```
-mvn test
-```
+This project is CI-enabled using **GitHub Actions**.
+
+On every push or pull request to the `master` branch:
+
+- Java environment is set up
+- Chrome is installed
+- Maven build runs
+- All tests execute automatically
+- Results are visible in the **Actions** tab
 
 ---
 
@@ -151,14 +179,16 @@ mvn test
 
 ## Automation Concepts Demonstrated
 
-* Selenium WebDriver automation
-* TestNG test lifecycle management
-* Assertions and validations
-* Explicit wait usage
-* Locator strategies (ID, CSS Selector)
-* Modular test design
-* Git and GitHub workflow
-
+- Selenium WebDriver automation  
+- TestNG test lifecycle management  
+- Assertion-based validation  
+- Explicit wait handling  
+- Stable locator strategies  
+- Modular framework structure  
+- Maven dependency management  
+- Git workflow  
+- CI/CD pipeline integration
+  
 ---
 
 ## Author
