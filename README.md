@@ -22,7 +22,7 @@ This project is designed as part of a QA Automation portfolio to showcase automa
 - **Wait Strategy:** Explicit Wait (WebDriverWait)  
 - **CI/CD:** GitHub Actions  
 
---
+---
 
 ## Framework Structure
 
