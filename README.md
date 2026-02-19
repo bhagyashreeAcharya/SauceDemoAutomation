@@ -4,7 +4,7 @@
 
 This project is a professional UI automation framework built using **Java, Selenium WebDriver, TestNG, and Maven** to automate and validate core e-commerce workflows on the SauceDemo application.
 
-The framework demonstrates real-world automation practices including stable element handling, explicit waits, modular test structure, and complete end-to-end transaction coverage.
+The framework demonstrates real-world automation practices, including stable element handling, explicit waits, modular test structure, and complete end-to-end transaction coverage.
 
 This project is designed as part of a QA Automation portfolio to showcase automation skills and framework design understanding.
 
@@ -196,7 +196,7 @@ On every push or pull request to the `master` branch:
 Bhagyashree Acharya
 QA Automation Portfolio Project
 
-GitHub: https://github.com/YOUR_USERNAME/SauceDemoAutomation
+GitHub: https://github.com/bhagyashreeAcharya/SauceDemoAutomation
 
 ---
 
